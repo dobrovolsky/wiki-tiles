@@ -1,0 +1,8 @@
+*.json.bz2
+
+geojson/
+tiles/
+pbf/
+
+.venv/
+

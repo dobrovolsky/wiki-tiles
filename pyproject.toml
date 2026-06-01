@@ -1,0 +1,11 @@
+[project]
+name = "wiki-tiles"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "mbutil>=0.3.0",
+    "orjson>=3.11.9",
+    "tippecanoe>=2.72.0",
+]

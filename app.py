@@ -68,7 +68,6 @@ def process_row(line: bytes, outputs: dict):
             "type": "Feature",
             "geometry": {"type": "Point", "coordinates": [lon, lat]},
             "properties": {
-                "wiki_id": article["id"],
                 "label": label_value(article, lang) or article_title,
                 "wiki_title": article_title,
             },

@@ -5,7 +5,7 @@ Generate vector tiles with wikipedia articles.
 ## Run
 
 You can use dockes as well or install reqired tools and do it on your
-machine. Required tools: `uv`, `lbzip2`, `pv`, `tippecanoe`.
+machine. Required tools: `uv`, `lbzip2`. Optional: `pv` (progress display).
 
 ```bash
 podman build -t wiki-tiles .
@@ -34,7 +34,7 @@ For testing porposes you don't need all dump you can download part file.
 Or process it without downlaoding file on disc.
 
 ```bash
-curl -L -r 0-1000000 https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.bz2 | lbzip2 -dc | pv --force | grep '"P625"'
+curl -L -r 0-1000000 https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.bz2 | lbzip2 -dc | grep '"P625"'
 ```
 
 Notice: you always should start from 0.

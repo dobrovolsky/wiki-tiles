@@ -8,7 +8,8 @@ fi
 
 rm -rf geojson
 mkdir geojson
-lbzip2 -dc latest-all.json.bz2 | pv --force | grep '"P625"' | uv run app.py ${LANGS[@]}
+_pv() { command -v pv &>/dev/null && pv --force || cat; }
+lbzip2 -dc latest-all.json.bz2 | _pv | grep '"P625"' | uv run app.py ${LANGS[@]}
 
 rm -rf tiles
 mkdir tiles

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 LANGS=("ca" "cs" "en" "es" "eu" "de" "fr" "it" "nl" "pt-BR" "tr" "zh" "uk" "ru")
 
 if [ ! -f "latest-all.json.bz2" ]; then
